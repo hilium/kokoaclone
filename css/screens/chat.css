@@ -1,0 +1,274 @@
+#chat__body {
+  background-color: #abc1d1;
+  box-sizing: border-box;
+  height: 500vh;
+  /* position: relative; */
+}
+
+#chat-main {
+  /* margin-top: 100px; */
+  /* background-color: white; */
+  /* position: fixed; */
+  /* text-align: center; */
+  /* z-index: 100; */
+  width: 100%;
+
+  padding: 0 30px;
+  /* background-color: yellow; */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadein 1s linear;
+}
+
+@keyframes fadein {
+  to {
+    opacity: 1;
+    trasform: none;
+  }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+#chat__body .alt-header {
+  z-index: 1;
+  background-color: #abc1d1;
+}
+
+#chat__body .status-bar {
+  background-color: #abc1d1;
+  z-index: 10;
+}
+
+.chat__timestamp {
+  /* position: absolute; */
+  /* width: 100%; */
+  padding: 10px 0;
+  border-radius: 50px;
+  color: white;
+  background-color: #92a4b2;
+  margin-top: 100px;
+  margin-bottom: 25px;
+  font-size: 14px;
+  width: 30%;
+  text-align: center;
+}
+
+/* 내가 해본 것
+.chat__chat {width:100%;
+padding: 15px 0;
+display: flex;}
+
+.chat__ID {text-align:left;
+margin-bottom: 20px;
+color:grey;}
+
+.incoming {justify-content:flex-start;
+}
+
+.incoming__contents {position:relative;
+padding-right: 50px;}
+
+.sending__contents {position:relative;
+  padding: 10px 0 10px 50px;}
+
+.incoming__massage {background-color:white;
+border-radius: 15px;
+padding: 10px;
+margin-right: 10px;}
+
+.sending__massage {background-color:white;
+border-radius: 15px;
+padding: 10px;
+margin-left: 10px;}
+
+.incoming__chat__time {position:absolute;
+right: 10px;bottom:0;
+color: grey;
+font-size:15px;}
+
+.sending__chat__time {position:absolute;
+left: 10px;
+bottom:0;
+color: grey;
+font-size:15px;}
+
+.incoming img {margin-right: 10px;}
+
+.sending img {margin-left: 10px;}
+
+
+.sending {justify-content: flex-end;
+}
+
+.chat_img {
+  width: 60px;
+  height: 60px;
+  border-radius: 25px;
+} */
+
+.message-row {
+  width: 100%;
+  display: flex;
+}
+
+.message-row img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.message__author,
+.message__time {
+  opacity: 0.8;
+  font-size: 13px;
+}
+
+.message__bubble {
+  background-color: white;
+  padding: 10px;
+  border-radius: 15px;
+  border-top-left-radius: 1px;
+  margin-right: 5px;
+  font-size: 18px;
+  animation: fadein-L 1s linear;
+}
+
+@keyframes fadein-L {
+  to {
+    opacity: 1;
+    trasform: none;
+  }
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+
+.message__info {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.sending {
+  justify-content: flex-end;
+}
+
+.sending .message__bubble {
+  background-color: var(--yellow);
+  border-top-right-radius: 1px;
+  border-top-left-radius: 15px;
+  margin-left: 5px;
+  margin-right: 0;
+  animation: fadein-R 1s linear;
+}
+
+@keyframes fadein-R {
+  to {
+    opacity: 1;
+    trasform: none;
+  }
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+
+/* .sending .message__bubble {order:1;}
+  .sending .message__time {order:0;} */
+.sending .message__info {
+  flex-direction: row-reverse;
+}
+
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 25px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+.form__column:first-child {
+  width: 10%;
+}
+.form__column:last-child {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.reply i {
+  opacity: 0.5;
+}
+
+.reply input {
+  padding: 12px;
+  width: 100%;
+  border: var(--main-border);
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+.form__column:last-child > i,
+.form__column:last-child button {
+  position: absolute;
+  right: 5px;
+  top: 7px;
+}
+
+.form__column:last-child > i {
+  right: 40px;
+  top: 15px;
+}
+
+.form__column:last-child > button {
+  background-color: var(--yellow);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.form__column button i {
+  opacity: 1;
+}
+
+.form__column button:focus,
+.form__column button:active {
+  outline: none;
+}
+
+.reply:focus-within .form__column:first-child,
+.reply:focus-within .fa-kiss-wink-heart,
+.reply:focus-within button {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.reply .form__column:first-child,
+.reply .fa-kiss-wink-heard,
+.reply button {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.reply:focus-within input {
+  width: 95vw;
+  transform: translateX(-12%) translateY(-80px);
+}
+
+.reply:focus-within {
+  transform: translateY(80px);
+}

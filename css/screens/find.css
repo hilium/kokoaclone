@@ -1,0 +1,134 @@
+.functions {
+  padding: var(--horizontal-space);
+  display: flex;
+  justify-content: space-between;
+}
+
+.functions-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 20%;
+  text-align: center;
+}
+
+.functions-item i {
+  margin-bottom: 25px;
+}
+
+.recommandation {
+  margin: 0 var(--horizontal-space);
+  padding: 20px 0;
+  border-top: var(--main-border);
+  color: gray;
+  height: 25vh;
+}
+
+.recommandation div {
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.recommandation div {
+  font-size: 18px;
+}
+
+.openchat {
+  margin: 0 var(--horizontal-space);
+  padding: 20px 0;
+  border-top: var(--main-border);
+  color: gray;
+  height: 30vh;
+}
+.openchat__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.open-post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 5px 0;
+}
+.open-post__title {
+  font-weight: 600;
+  color: black;
+  margin-bottom: 5px;
+}
+
+.open-post__hashtag {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.open-post__member {
+  display: flex;
+  align-items: center;
+}
+
+.open-post__member span {
+  margin: 0 10px;
+}
+.open-post__member span:last-child {
+  color: pink;
+}
+
+.open-post__pic {
+  width: 20px;
+  height: 20px;
+  border-radius: 8px;
+}
+.open-post__photo {
+  position: relative;
+}
+
+.open-post__photo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 20%;
+}
+
+.open-post__hearts {
+  /* width: 60px;
+  height: 20px; */
+  border-radius: 20%;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: 5px;
+  bottom: 5px;
+  right: 5px;
+}
+.open-post__hearts span {
+  margin-left: 3px;
+}
+
+.open-post__hearts:hover i {
+  will-change: transform;
+  animation: bounce 1s linear infinite;
+}
+
+@keyframes bounce {
+  0% {
+    color: white;
+    transform: none;
+  }
+  50% {
+    color: tomato;
+    transform: scale(2);
+  }
+  100% {
+    color: white;
+    transform: none;
+  }
+}
